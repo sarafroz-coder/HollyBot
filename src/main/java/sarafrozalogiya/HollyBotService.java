@@ -108,4 +108,13 @@ public class HollyBotService {
         return sendMessage;
     }
 
+    public SendMessage sendMessage(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("GitHub");
+        return sendMessage;
+
+    }
+
+
 }
