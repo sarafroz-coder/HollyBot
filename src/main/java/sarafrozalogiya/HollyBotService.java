@@ -108,6 +108,8 @@ public class HollyBotService {
         return sendMessage;
     }
 
+
+    public SendMessage
     public SendMessage sendMessage(Long chatId){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
