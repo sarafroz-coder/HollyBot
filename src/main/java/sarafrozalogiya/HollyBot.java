@@ -54,7 +54,6 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 
-
             if (text.equals("\uD83E\uDD58 Национальные блюда")){
                 try {
                     execute(hollyBotService.rusmilytaommenu(chatId));
