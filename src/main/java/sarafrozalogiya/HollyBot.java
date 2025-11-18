@@ -23,6 +23,126 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
+            if (text.equals("\uD83E\uDD58 Milliy taom")){
+                try {
+                    execute(hollyBotService.milliytaommenu(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("\uD83C\uDF54 Fast-food")){
+                try {
+                    execute(hollyBotService.fastfoodmenu(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("\uD83C\uDF70 Desert")){
+                try {
+                    execute(hollyBotService.desetmenu(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("⬅\uFE0F Qaytish")){
+                try {
+                    execute(hollyBotService.language(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+            if (text.equals("\uD83E\uDD58 Национальные блюда")){
+                try {
+                    execute(hollyBotService.rusmilytaommenu(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("\uD83C\uDF54 Фаст-фуд")){
+                try {
+                    execute(hollyBotService.rusfastfood(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("\uD83C\uDF70 Десерт")){
+                try {
+                    execute(hollyBotService.rusdesert(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("⬅\uFE0F Назад")){
+                try {
+                    execute(hollyBotService.language(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("\uD83E\uDD58 National dish")){
+                try {
+                    execute(hollyBotService.inglsmilytaommenu(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("\uD83C\uDF54 Fast-food")){
+                try {
+                    execute(hollyBotService.inglizfastfood(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("\uD83C\uDF70 Dessert")){
+                try {
+                    execute(hollyBotService.inglsdesert(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("⬅\uFE0F Go back")){
+                try {
+                    execute(hollyBotService.language(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+            if (text.equals("\uD83E\uDD58 传统菜肴")){
+                try {
+                    execute(hollyBotService.xitoymilliytaom(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("\uD83C\uDF54 快餐")){
+                try {
+                    execute(hollyBotService.xitoyfastfood(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("\uD83C\uDF70 甜点")){
+                try {
+                    execute(hollyBotService.xitoydesert(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("⬅️ 返回")){
+                try {
+                    execute(hollyBotService.language(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
         } else if (update.hasCallbackQuery()) {
             CallbackQuery callbackQuery = update.getCallbackQuery();
             String data = callbackQuery.getData();
@@ -80,6 +200,19 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+            if (data.equals("xitoyId")){
+                try {
+                    execute(hollyBotService.xitoymenu(chatId));
+                    DeleteMessage deleteMessage = new DeleteMessage();
+                    deleteMessage.setChatId(chatId);
+                    deleteMessage.setMessageId(messageId);
+
+                    execute(deleteMessage);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
         }
     }
 
