@@ -33,12 +33,6 @@ public class HollyBotService {
         row.add(button);
         rowList.add(row);
 
-        row = new ArrayList<>();
-        button = new InlineKeyboardButton();
-        button.setText("\uD83C\uDDE8\uD83C\uDDF3 Xitoy tili");
-        button.setCallbackData("xitoyId");
-        row.add(button);
-        rowList.add(row);
 
         row = new ArrayList<>();
         button = new InlineKeyboardButton();
@@ -47,6 +41,12 @@ public class HollyBotService {
         row.add(button);
         rowList.add(row);
 
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("\uD83C\uDDE8\uD83C\uDDF3 Xitoy tili");
+        button.setCallbackData("xitoyId");
+        row.add(button);
+        rowList.add(row);
 
         inlineKeyboardMarkup.setKeyboard(rowList);
         sendMessage.setReplyMarkup(inlineKeyboardMarkup);
