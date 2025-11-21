@@ -54,7 +54,6 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 
-
             if (text.equals("\uD83E\uDD58 Национальные блюда")){
                 try {
                     execute(hollyBotService.rusmilytaommenu(chatId));
@@ -207,7 +206,8 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 
-        } else if (update.hasCallbackQuery()) {
+        }
+        else if (update.hasCallbackQuery()) {
             CallbackQuery callbackQuery = update.getCallbackQuery();
             String data = callbackQuery.getData();
             Long chatId = callbackQuery.getMessage().getChatId();
