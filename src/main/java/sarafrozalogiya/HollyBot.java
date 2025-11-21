@@ -142,6 +142,70 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+            if (text.equals("\uD83C\uDF5B Palov va Guruchli taomlar")) {
+                try {
+                    execute(hollyBotService.Palovvaguruchlitaom(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("Palov")){
+                try {
+                    execute(hollyBotService.palov(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("Lag'mon")){
+                try {
+                    execute(hollyBotService.lagmon(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("Sho'rva")){
+                try {
+                    execute(hollyBotService.shorva(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("\uD83C\uDF5E Non va Xamirli taomlar")){
+                try {
+                    execute(hollyBotService.nonvaxamr(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("Somsa")){
+                try {
+                    execute(hollyBotService.somsa(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("Manti")){
+                try {
+                    execute(hollyBotService.manti(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("Chuchvara")){
+                try {
+                    execute(hollyBotService.chuchvara(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("Non")){
+                try {
+                    execute(hollyBotService.lepeshka(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
 
         } else if (update.hasCallbackQuery()) {
             CallbackQuery callbackQuery = update.getCallbackQuery();
