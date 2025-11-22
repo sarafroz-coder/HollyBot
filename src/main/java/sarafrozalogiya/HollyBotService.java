@@ -239,6 +239,18 @@ public class HollyBotService {
     button.setCallbackData("lepeshkaId");
     row.add(button);
 
+    row = new ArrayList<>();
+    button =  new InlineKeyboardButton();
+    button.setText("Norin");
+    button.setCallbackData("norinId");
+    row.add(button);
+    rowList.add(row);
+
+    button = new InlineKeyboardButton();
+    button.setText("\uD83D\uDC48\uD83C\uDFFB Qaytish");
+    button.setCallbackData("qaytId");
+    row.add(button);
+
     inlineKeyboardMarkup.setKeyboard(rowList);
     sendMessage.setReplyMarkup(inlineKeyboardMarkup);
     return sendMessage;
@@ -271,9 +283,36 @@ public class HollyBotService {
         sendPhoto.setCaption("Lepeshka \nNarxi:donasi 6.000");
         return sendPhoto;
     }
+    public SendPhoto norin(Long chatId){
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/23"));
+        sendPhoto.setCaption("Norin \nNarxi:47.000");
+        return sendPhoto;
+    }
 
 
 
+//    Go'shtli taomlar
+    public SendMessage goshtlitaom(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("O'zingizga yoqqan taomni tanlang:");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>>rowList =  new ArrayList<>();
+
+        List<InlineKeyboardButton>row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("Shashlik");
+        button.setCallbackData("shashluId");
+        row.add(button);
+        rowList.add(row);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Dimlama");
+    }
 
 
 

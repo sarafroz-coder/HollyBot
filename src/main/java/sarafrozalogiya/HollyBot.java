@@ -205,6 +205,14 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+            if (text.equals("Norin")){
+                try {
+                    execute(hollyBotService.norin(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+
+            }
 
         }
         else if (update.hasCallbackQuery()) {
@@ -271,6 +279,17 @@ public class HollyBot extends TelegramLongPollingBot {
                     deleteMessage.setChatId(chatId);
                     deleteMessage.setMessageId(messageId);
 
+                    execute(deleteMessage);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("qaytId")){
+                try {
+                    execute(hollyBotService.milliytaommenu(chatId));
+                    DeleteMessage deleteMessage = new DeleteMessage();
+                    deleteMessage.setChatId(chatId);
+                    deleteMessage.setMessageId(messageId);
                     execute(deleteMessage);
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
