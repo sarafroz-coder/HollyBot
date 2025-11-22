@@ -312,6 +312,15 @@ public class HollyBotService {
         row = new ArrayList<>();
         button = new InlineKeyboardButton();
         button.setText("Dimlama");
+        row.add(button);
+        rowList.add(row);
+
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+        return sendMessage;
+
+
     }
 
 
