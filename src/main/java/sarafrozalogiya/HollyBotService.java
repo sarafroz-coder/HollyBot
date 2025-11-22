@@ -225,7 +225,7 @@ public class HollyBotService {
     button = new InlineKeyboardButton();
     button.setText("Manti");
     button.setCallbackData("mantiId");
-
+    row.add(button);
 
     row = new ArrayList<>();
     button = new InlineKeyboardButton();
@@ -272,22 +272,22 @@ public class HollyBotService {
     public SendPhoto chuchvara (Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/8"));
-        sendPhoto.setCaption("Chuchvara \nNarxi:donasi 35.000");
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/6"));
+        sendPhoto.setCaption("Chuchvara \nMol go'shti, sabzi, piyoz, o'simlik yog'i, sarimsoq, pomidor, maydanoz\uD83C\uDF1F \nNarxi:donasi 35.000\uD83D\uDCB8");
         return sendPhoto;
     }
     public SendPhoto lepeshka (Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/8"));
-        sendPhoto.setCaption("Lepeshka \nNarxi:donasi 6.000");
+        sendPhoto.setCaption("Lepeshka \nU o'ziga xos hid va yumshoq tuzilishga ega\uD83C\uDF1F \nNarxi:donasi 6.000\uD83D\uDCB8");
         return sendPhoto;
     }
     public SendPhoto norin(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/23"));
-        sendPhoto.setCaption("Norin \nNarxi:47.000");
+        sendPhoto.setCaption("Norin \nOt go'shti taomga boy ta'm va xushbo'y hid beradi. Dimlangan xamir va o'simlik moyi bir tekis qovurishini ta'minlaydi. Bulyon ta'mga sharbat va chuqurlik qo'shadi\uD83C\uDF1F \nNarxi:47.000\uD83D\uDCB8");
         return sendPhoto;
     }
 
