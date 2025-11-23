@@ -38,7 +38,6 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("\uD83C\uDF70 Desert")){
                 try {
                     execute(hollyBotService.desetmenu(chatId));
@@ -141,6 +140,8 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
+
             if (text.equals("\uD83C\uDF5B Palov va Guruchli taomlar")) {
                 try {
                     execute(hollyBotService.Palovvaguruchlitaom(chatId));
@@ -148,31 +149,16 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("Palov")){
-                try {
-                    execute(hollyBotService.palov(chatId));
-                } catch (TelegramApiException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-            if (text.equals("Lag'mon")){
-                try {
-                    execute(hollyBotService.lagmon(chatId));
-                } catch (TelegramApiException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-            if (text.equals("Sho'rva")){
-                try {
-                    execute(hollyBotService.shorva(chatId));
-                } catch (TelegramApiException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-
             if (text.equals("\uD83C\uDF5E Non va Xamirli taomlar")){
                 try {
                     execute(hollyBotService.nonvaxamr(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("\uD83E\uDD69 Go'shtli taomlar")){
+                try {
+                    execute(hollyBotService.goshtlitaom(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
@@ -199,6 +185,30 @@ public class HollyBot extends TelegramLongPollingBot {
 //                    throw new RuntimeException(e);
 //                }
 
+//            palov va guruchli taomlar
+            if (data.equals("palovId")){
+                try {
+                    execute(hollyBotService.palov(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("lagmonId")){
+                try {
+                    execute(hollyBotService.lagmon(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("shorvaId")){
+                try {
+                    execute(hollyBotService.shorva(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+//            non va xamirli taomlar
             if (data.equals("mantiId")){
                 try {
                     execute(hollyBotService.manti(chatId));
@@ -235,6 +245,9 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 
+
+
+//            tillar data ichida deleta ham bor
             if (data.equals("ozId")){
                 try {
                     execute(hollyBotService.ozbektilimenu(chatId));
@@ -285,6 +298,17 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
             if (data.equals("qaytId")){
+                try {
+                    execute(hollyBotService.milliytaommenu(chatId));
+                    DeleteMessage deleteMessage = new DeleteMessage();
+                    deleteMessage.setChatId(chatId);
+                    deleteMessage.setMessageId(messageId);
+                    execute(deleteMessage);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("qayturId")){
                 try {
                     execute(hollyBotService.milliytaommenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();

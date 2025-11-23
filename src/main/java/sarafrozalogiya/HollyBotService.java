@@ -95,7 +95,7 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
-
+//    milliytaommenusi
     public SendMessage milliytaommenu(Long chatId){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -144,7 +144,7 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
-
+//    palov va guruchli taomlar sarafroziki
     public SendMessage Palovvaguruchlitaom(Long chatId){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -176,7 +176,10 @@ public class HollyBotService {
 
         row = new ArrayList<>();
         button = new InlineKeyboardButton();
-        button.setText("");
+        button.setText("\uD83D\uDC48\uD83C\uDFFB Qaytish \uD83D\uDC48\uD83C\uDFFB");
+        button.setCallbackData("qayturId");
+        row.add(button);
+        rowList.add(row);
 
         inlineKeyboardMarkup.setKeyboard(rowList);
         sendMessage.setReplyMarkup(inlineKeyboardMarkup);
@@ -186,27 +189,27 @@ public class HollyBotService {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/2"));
-        sendPhoto.setCaption("Palov \nNarxi:50.000");
+        sendPhoto.setCaption("Palov \nSersuv go‘shti, yumshoq guruchi va xushbo‘y ziravorlari bilan to‘yimli ta’m beradi✨ \nNarxi:50.000\uD83D\uDCB8");
         return sendPhoto;
     }
     public SendPhoto lagmon(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/3"));
-        sendPhoto.setCaption("Lag'mon \nNarxi:54.000");
+        sendPhoto.setCaption("Lag'mon \nQizil yog‘da qovurilgan xamir, shirali sabzavotlar va mazali ta’mi bilan juda to‘yimli✨ \nNarxi:54.000\uD83D\uDCB8");
         return sendPhoto;
     }
     public SendPhoto shorva(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/11"));
-        sendPhoto.setCaption("Sho'rva \nNarxi:35.000");
+        sendPhoto.setCaption("Sho'rva \nYengil va mazali bulon, yumshoq go‘sht hamda sabzavotlar bilan iliq ta’m beradi✨ \nNarxi:35.000\uD83D\uDCB8");
         return sendPhoto;
     }
 
 
-//    mubini non va xamirlisi shotga bo'ladi
 
+//    mubini non va xamirlisi shotga bo'ladi
     public SendMessage nonvaxamr(Long chatId){
     SendMessage sendMessage = new SendMessage();
     sendMessage.setChatId(chatId);
@@ -222,10 +225,6 @@ public class HollyBotService {
     rowList.add(row);
 
 
-    button = new InlineKeyboardButton();
-    button.setText("Manti");
-    button.setCallbackData("mantiId");
-    row.add(button);
 
     row = new ArrayList<>();
     button = new InlineKeyboardButton();
@@ -235,21 +234,31 @@ public class HollyBotService {
     rowList.add(row);
 
     button = new InlineKeyboardButton();
+    button.setText("Manti");
+    button.setCallbackData("mantiId");
+    row.add(button);
+
+
+
+    row = new ArrayList<>();
+    button = new InlineKeyboardButton();
     button.setText("Lepeshka");
     button.setCallbackData("lepeshkaId");
     row.add(button);
+    rowList.add(row);
 
-    row = new ArrayList<>();
     button =  new InlineKeyboardButton();
     button.setText("Norin");
     button.setCallbackData("norinId");
     row.add(button);
-    rowList.add(row);
 
+
+    row = new ArrayList<>();
     button = new InlineKeyboardButton();
     button.setText("\uD83D\uDC48\uD83C\uDFFB Qaytish");
     button.setCallbackData("qaytId");
     row.add(button);
+    rowList.add(row);
 
     inlineKeyboardMarkup.setKeyboard(rowList);
     sendMessage.setReplyMarkup(inlineKeyboardMarkup);
@@ -259,14 +268,14 @@ public class HollyBotService {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/4"));
-        sendPhoto.setCaption("Somsa \nNarxi:donasi - 8.000");
+        sendPhoto.setCaption("Somsa \nGo‘shtli somsa o‘zining yumshoq ta’mi va xushbo‘y pishig‘i bilan ajralib turadi✨ \nNarxi:donasi - 8.000\uD83D\uDCB8");
         return sendPhoto;
     }
     public SendPhoto manti (Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/5"));
-        sendPhoto.setCaption("Manti \nNarxi:donasi 8.000");
+        sendPhoto.setCaption("Manti \nMol go'shti bilan manti\uD83C\uDF1F \nNarxi:donasi 8.000\uD83D\uDCB8");
         return sendPhoto;
     }
     public SendPhoto chuchvara (Long chatId){
@@ -312,6 +321,14 @@ public class HollyBotService {
         row = new ArrayList<>();
         button = new InlineKeyboardButton();
         button.setText("Dimlama");
+        button.setCallbackData("dimlamaId");
+        row.add(button);
+        rowList.add(row);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Qaytish \uD83D\uDC48\uD83C\uDFFB");
+        button.setCallbackData("qaytishqaytishId");
         row.add(button);
         rowList.add(row);
 
@@ -321,6 +338,21 @@ public class HollyBotService {
         return sendMessage;
 
 
+    }
+    public SendPhoto shashli(Long chatId){
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/9"));
+        sendPhoto.setCaption("Shashlik \nKo‘mirda qizarib pishgan, shirali va xushbo‘y ta’mi bilan ishtahani ochadi✨ \nNarxi:18.000\uD83D\uDCB8");
+        return sendPhoto;
+    }
+    public SendPhoto dimlama(Long chatId){
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/7"));
+        sendPhoto.setCaption("Dimlama \nGo‘sht, kartoshka va sabzavotlar o‘z sharbatida yumshoq pishib, ta’omga boy va iliq ta’m beradi✨\n" +
+                "Narxi:28.000\uD83D\uDCB8");
+        return sendPhoto;
     }
 
 
