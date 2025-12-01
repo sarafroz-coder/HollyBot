@@ -15,11 +15,11 @@ public class HollyBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        if (update.hasMessage()&& update.getMessage().hasText()){
+        if (update.hasMessage() && update.getMessage().hasText()) {
             Long chatId = update.getMessage().getChatId();
             String text = update.getMessage().getText();
 
-            if (text.equals("/start")){
+            if (text.equals("/start")) {
                 try {
                     execute(hollyBotService.language(chatId));
                 } catch (TelegramApiException e) {
@@ -27,28 +27,28 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 
-            if (text.equals("\uD83E\uDD58 Milliy taom")){
+            if (text.equals("\uD83E\uDD58 Milliy taom")) {
                 try {
                     execute(hollyBotService.milliytaommenu(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF54 Fast-foood")){
+            if (text.equals("\uD83C\uDF54 Fast-foood")) {
                 try {
                     execute(hollyBotService.fastfoodmenu(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF70 Desert")){
+            if (text.equals("\uD83C\uDF70 Desert")) {
                 try {
                     execute(hollyBotService.desetmenu(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("⬅\uFE0F Qaytish")){
+            if (text.equals("⬅\uFE0F Qaytish")) {
                 try {
                     execute(hollyBotService.language(chatId));
                 } catch (TelegramApiException e) {
@@ -56,28 +56,28 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 
-            if (text.equals("\uD83E\uDD58 Национальные блюда")){
+            if (text.equals("\uD83E\uDD58 Национальные блюда")) {
                 try {
                     execute(hollyBotService.rusmilytaommenu(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF54 Фаст-фуд")){
+            if (text.equals("\uD83C\uDF54 Фаст-фуд")) {
                 try {
                     execute(hollyBotService.rusfastfoodmenu(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF70 Десерт")){
+            if (text.equals("\uD83C\uDF70 Десерт")) {
                 try {
                     execute(hollyBotService.rusdesert(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("⬅\uFE0F Назад")){
+            if (text.equals("⬅\uFE0F Назад")) {
                 try {
                     execute(hollyBotService.language(chatId));
                 } catch (TelegramApiException e) {
@@ -85,28 +85,28 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 
-            if (text.equals("\uD83E\uDD58 National dish")){
+            if (text.equals("\uD83E\uDD58 National dish")) {
                 try {
                     execute(hollyBotService.inglsmilytaommenu(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF54  Fast-food")){
+            if (text.equals("\uD83C\uDF54  Fast-food")) {
                 try {
                     execute(hollyBotService.inglisfastfoodmenu(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF70 Dessert")){
+            if (text.equals("\uD83C\uDF70 Dessert")) {
                 try {
                     execute(hollyBotService.inglsdesert(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("⬅\uFE0F Go back")){
+            if (text.equals("⬅\uFE0F Go back")) {
                 try {
                     execute(hollyBotService.language(chatId));
                 } catch (TelegramApiException e) {
@@ -115,35 +115,35 @@ public class HollyBot extends TelegramLongPollingBot {
             }
 
 
-            if (text.equals("\uD83E\uDD58 传统菜肴")){
+            if (text.equals("\uD83E\uDD58 传统菜肴")) {
                 try {
                     execute(hollyBotService.xitoymilliytaom(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF54 快餐")){
+            if (text.equals("\uD83C\uDF54 快餐")) {
                 try {
                     execute(hollyBotService.xitoyfastfoodmenu(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF70 甜点")){
+            if (text.equals("\uD83C\uDF70 甜点")) {
                 try {
                     execute(hollyBotService.xitoydesert(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("⬅️ 返回")){
+            if (text.equals("⬅️ 返回")) {
                 try {
                     execute(hollyBotService.language(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF5B Palov va Guruchli taomlar")){
+            if (text.equals("\uD83C\uDF5B Palov va Guruchli taomlar")) {
                 try {
                     execute(hollyBotService.Palovvaguruchlitaom(chatId));
                 } catch (TelegramApiException e) {
@@ -159,127 +159,126 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF5E Non va Xamirli taomlar")){
+            if (text.equals("\uD83C\uDF5E Non va Xamirli taomlar")) {
                 try {
                     execute(hollyBotService.nonvaxamr(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83E\uDD69 Go'shtli taomlar")){
+            if (text.equals("\uD83E\uDD69 Go'shtli taomlar")) {
                 try {
                     execute(hollyBotService.goshtlitaom(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF5C Sabzavotli va Sho'rva taomlari")){
+            if (text.equals("\uD83C\uDF5C Sabzavotli va Sho'rva taomlari")) {
                 try {
                     execute(hollyBotService.sabzovotlitaommenu(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83E\uDD42 Ichimliklar")){
+            if (text.equals("\uD83E\uDD42 Ichimliklar")) {
                 try {
                     execute(hollyBotService.ichimli(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF6E Shirin va desertlar")){
+            if (text.equals("\uD83C\uDF6E Shirin va desertlar")) {
                 try {
                     execute(hollyBotService.desert(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("◀\uFE0F Qaytish")){
+            if (text.equals("◀\uFE0F Qaytish")) {
                 try {
                     execute(hollyBotService.ozbektilimenu(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83E\uDD67 Keks va pechenye")){
+            if (text.equals("\uD83E\uDD67 Keks va pechenye")) {
                 try {
                     execute(hollyBotService.keksvapechenya(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("⏪ Qaytish")){
+            if (text.equals("⏪ Qaytish")) {
                 try {
                     execute(hollyBotService.ozbektilimenu(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("↩\uFE0F Qaytish")){
+            if (text.equals("↩\uFE0F Qaytish")) {
                 try {
                     execute(hollyBotService.ozbektilimenu(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF6C Shirinliklar va konfetlar")){
+            if (text.equals("\uD83C\uDF6C Shirinliklar va konfetlar")) {
                 try {
                     execute(hollyBotService.shirinlilarvakanfetlar(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF54\uD83E\uDD6A Burgerlar va sendvichlar")){
+            if (text.equals("\uD83C\uDF54\uD83E\uDD6A Burgerlar va sendvichlar")) {
                 try {
                     execute(hollyBotService.Burgersendvich(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF55 Pizza va pechtaomlar")){
+            if (text.equals("\uD83C\uDF55 Pizza va pechtaomlar")) {
                 try {
                     execute(hollyBotService.Pizzapechtaomlar(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF5F Tuzli snacklar")){
+            if (text.equals("\uD83C\uDF5F Tuzli snacklar")) {
                 try {
                     execute(hollyBotService.tuzlisnack(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF67 Muzqaymoq va sovuq desertlar")){
+            if (text.equals("\uD83C\uDF67 Muzqaymoq va sovuq desertlar")) {
                 try {
                     execute(hollyBotService.Muzqaymoqvasovuqdesertlar(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83E\uDD6E Pirog va tortlar")){
+            if (text.equals("\uD83E\uDD6E Pirog va tortlar")) {
                 try {
                     execute(hollyBotService.Pirogvatortlar(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83E\uDED0 Mevali desertlar")){
+            if (text.equals("\uD83E\uDED0 Mevali desertlar")) {
                 try {
                     execute(hollyBotService.Mevalidesertlar(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("\uD83C\uDF2D Tez tayyorlanadigan xalqaro taomlar")){
+            if (text.equals("\uD83C\uDF2D Tez tayyorlanadigan xalqaro taomlar")) {
                 try {
                     execute(hollyBotService.teztayyorlanadiganxalqarotaomlar(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-        }
-        else if (update.hasCallbackQuery()) {
+        } else if (update.hasCallbackQuery()) {
             CallbackQuery callbackQuery = update.getCallbackQuery();
             String data = callbackQuery.getData();
             Long chatId = callbackQuery.getMessage().getChatId();
@@ -301,21 +300,21 @@ public class HollyBot extends TelegramLongPollingBot {
 //                }
 
 //            palov va guruchli taomlar
-            if (data.equals("palovId")){
+            if (data.equals("palovId")) {
                 try {
                     execute(hollyBotService.palov(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("lagmonId")){
+            if (data.equals("lagmonId")) {
                 try {
                     execute(hollyBotService.lagmon(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("shorvaId")){
+            if (data.equals("shorvaId")) {
                 try {
                     execute(hollyBotService.shorva(chatId));
                 } catch (TelegramApiException e) {
@@ -324,427 +323,427 @@ public class HollyBot extends TelegramLongPollingBot {
             }
 
 //            non va xamirli taomlar
-            if (data.equals("mantiId")){
+            if (data.equals("mantiId")) {
                 try {
                     execute(hollyBotService.manti(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("chuchvaraId")){
+            if (data.equals("chuchvaraId")) {
                 try {
                     execute(hollyBotService.chuchvara(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("lepeshkaId")){
+            if (data.equals("lepeshkaId")) {
                 try {
                     execute(hollyBotService.lepeshka(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("norinId")){
+            if (data.equals("norinId")) {
                 try {
                     execute(hollyBotService.norin(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("somsaId")){
+            if (data.equals("somsaId")) {
                 try {
                     execute(hollyBotService.somsa(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("shashluId")){
+            if (data.equals("shashluId")) {
                 try {
                     execute(hollyBotService.shashli(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("dimlamaId")){
+            if (data.equals("dimlamaId")) {
                 try {
                     execute(hollyBotService.dimlama(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("mastavaId")){
+            if (data.equals("mastavaId")) {
                 try {
                     execute(hollyBotService.mastava(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("sabzavotliqovurilgantaomId")){
+            if (data.equals("sabzavotliqovurilgantaomId")) {
                 try {
                     execute(hollyBotService.sabzavotliqovurilgantaom(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("tabakaId")){
+            if (data.equals("tabakaId")) {
                 try {
                     execute(hollyBotService.tabaka(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("qchoyId")){
+            if (data.equals("qchoyId")) {
                 try {
                     execute(hollyBotService.choyqora(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("ychoyId")){
+            if (data.equals("ychoyId")) {
                 try {
                     execute(hollyBotService.yashilchoy(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("lchoyId")){
+            if (data.equals("lchoyId")) {
                 try {
                     execute(hollyBotService.limonchoy(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("qatiqId")){
+            if (data.equals("qatiqId")) {
                 try {
                     execute(hollyBotService.qatiq(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("ayronId")){
+            if (data.equals("ayronId")) {
                 try {
                     execute(hollyBotService.ayron(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("suzmaId")){
+            if (data.equals("suzmaId")) {
                 try {
                     execute(hollyBotService.suzma(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("anorsharbatiId")){
+            if (data.equals("anorsharbatiId")) {
                 try {
                     execute(hollyBotService.anorsharbat(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("holvaId")){
+            if (data.equals("holvaId")) {
                 try {
                     execute(hollyBotService.halva(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("chakchakId")){
+            if (data.equals("chakchakId")) {
                 try {
                     execute(hollyBotService.chakchak(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("sumalakId")){
+            if (data.equals("sumalakId")) {
                 try {
                     execute(hollyBotService.sumalak(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("qandId")){
+            if (data.equals("qandId")) {
                 try {
                     execute(hollyBotService.qand(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("yongoqId")){
+            if (data.equals("yongoqId")) {
                 try {
                     execute(hollyBotService.yongoqchala(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("pirogId")){
+            if (data.equals("pirogId")) {
                 try {
                     execute(hollyBotService.pirog(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("muffinId")){
+            if (data.equals("muffinId")) {
                 try {
                     execute(hollyBotService.muffin(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("cupcakeId")){
+            if (data.equals("cupcakeId")) {
                 try {
                     execute(hollyBotService.cupcake(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("cookieId")){
+            if (data.equals("cookieId")) {
                 try {
                     execute(hollyBotService.cookie(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("biscuitId")){
+            if (data.equals("biscuitId")) {
                 try {
                     execute(hollyBotService.biscuit(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("brownieId")){
+            if (data.equals("brownieId")) {
                 try {
                     execute(hollyBotService.brownie(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("doublburgId")){
+            if (data.equals("doublburgId")) {
                 try {
                     execute(hollyBotService.doubleburg(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("gamburgId")){
+            if (data.equals("gamburgId")) {
                 try {
                     execute(hollyBotService.gamburg(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("chiknburgId")){
+            if (data.equals("chiknburgId")) {
                 try {
                     execute(hollyBotService.cheeknburg(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("clubsandwichId")){
+            if (data.equals("clubsandwichId")) {
                 try {
                     execute(hollyBotService.clabsandwich(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("shokoladId")){
+            if (data.equals("shokoladId")) {
                 try {
                     execute(hollyBotService.chocolate(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("truffId")){
+            if (data.equals("truffId")) {
                 try {
                     execute(hollyBotService.truff(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("karamelId")){
+            if (data.equals("karamelId")) {
                 try {
                     execute(hollyBotService.karamel(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("marshmellowId")){
+            if (data.equals("marshmellowId")) {
                 try {
                     execute(hollyBotService.marshmellow(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("pralineId")){
+            if (data.equals("pralineId")) {
                 try {
                     execute(hollyBotService.praline(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("margaritaId")){
+            if (data.equals("margaritaId")) {
                 try {
                     execute(hollyBotService.margarit(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("pepperoniId")){
+            if (data.equals("pepperoniId")) {
                 try {
                     execute(hollyBotService.pepperoni(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("bbqburgId")){
+            if (data.equals("bbqburgId")) {
                 try {
                     execute(hollyBotService.bbqpizza(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("veganoizzaId")){
+            if (data.equals("veganoizzaId")) {
                 try {
                     execute(hollyBotService.veganpizza(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("friesId")){
+            if (data.equals("friesId")) {
                 try {
                     execute(hollyBotService.fries(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("mozzarellasticksId")){
+            if (data.equals("mozzarellasticksId")) {
                 try {
                     execute(hollyBotService.mozzarellasticks(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("onionringsId")){
+            if (data.equals("onionringsId")) {
                 try {
                     execute(hollyBotService.onionrings(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("nachosId")){
+            if (data.equals("nachosId")) {
                 try {
                     execute(hollyBotService.Nachos(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("icecreamId")){
+            if (data.equals("icecreamId")) {
                 try {
                     execute(hollyBotService.icecream(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("gelatoId")){
+            if (data.equals("gelatoId")) {
                 try {
                     execute(hollyBotService.gelato(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("sorbetId")){
+            if (data.equals("sorbetId")) {
                 try {
                     execute(hollyBotService.sorbet(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("frozenyogurtId")){
+            if (data.equals("frozenyogurtId")) {
                 try {
                     execute(hollyBotService.frozenyogurt(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("milkshakeId")){
+            if (data.equals("milkshakeId")) {
                 try {
                     execute(hollyBotService.milkshake(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("cheesecakeId")){
+            if (data.equals("cheesecakeId")) {
                 try {
                     execute(hollyBotService.cheesecake(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("applepieId")){
+            if (data.equals("applepieId")) {
                 try {
                     execute(hollyBotService.applepie(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("chocolatecakeId")){
+            if (data.equals("chocolatecakeId")) {
                 try {
                     execute(hollyBotService.chocolatecake(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("fruittartId")){
+            if (data.equals("fruittartId")) {
                 try {
                     execute(hollyBotService.fruittart(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("fruitsaladId")){
+            if (data.equals("fruitsaladId")) {
                 try {
                     execute(hollyBotService.fruitsalad(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("compoteId")){
+            if (data.equals("compoteId")) {
                 try {
                     execute(hollyBotService.compote(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("jellyId")){
+            if (data.equals("jellyId")) {
                 try {
                     execute(hollyBotService.jelly(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("hotdogId")){
+            if (data.equals("hotdogId")) {
                 try {
                     execute(hollyBotService.hotdog(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("tacosId")){
+            if (data.equals("tacosId")) {
                 try {
                     execute(hollyBotService.tacos(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("burritoId")){
+            if (data.equals("burritoId")) {
                 try {
                     execute(hollyBotService.burrito(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("shawarmaId")){
+            if (data.equals("shawarmaId")) {
                 try {
                     execute(hollyBotService.shawarma(chatId));
                 } catch (TelegramApiException e) {
@@ -753,9 +752,8 @@ public class HollyBot extends TelegramLongPollingBot {
             }
 
 
-
 //            palov
-            if (data.equals("plyuspalovId")){
+            if (data.equals("plyuspalovId")) {
                 EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
@@ -766,7 +764,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("minuspalovId")){
+            if (data.equals("minuspalovId")) {
                 EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
@@ -779,18 +777,18 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 //            lagmon
-            if (data.equals("plyuslagmonId")){
-                EditMessageReplyMarkup editMessageReplyMarkup =  new EditMessageReplyMarkup();
+            if (data.equals("plyuslagmonId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
                 editMessageReplyMarkup.setReplyMarkup(hollyBotService.lagmonplyus(chatId));
                 try {
-                   execute(editMessageReplyMarkup);
+                    execute(editMessageReplyMarkup);
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("minuslagmonId")){
+            if (data.equals("minuslagmonId")) {
                 EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
@@ -803,8 +801,8 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 //            shorva
-            if (data.equals("minusshorvaId")){
-                EditMessageReplyMarkup editMessageReplyMarkup =  new EditMessageReplyMarkup();
+            if (data.equals("minusshorvaId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
                 editMessageReplyMarkup.setReplyMarkup(hollyBotService.shorvaminus(chatId));
@@ -814,7 +812,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("plyusshorvaId")){
+            if (data.equals("plyusshorvaId")) {
                 EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
@@ -826,10 +824,9 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
 //            manti
-            if (data.equals("minusmantiId")){
-                EditMessageReplyMarkup editMessageReplyMarkup =  new EditMessageReplyMarkup();
+            if (data.equals("minusmantiId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
                 editMessageReplyMarkup.setReplyMarkup(hollyBotService.mantiminus(chatId));
@@ -839,7 +836,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("plyusmantiId")){
+            if (data.equals("plyusmantiId")) {
                 EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
@@ -851,11 +848,9 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
-
 //chuchvara
-            if (data.equals("minuschuchvaraId")){
-                EditMessageReplyMarkup editMessageReplyMarkup =  new EditMessageReplyMarkup();
+            if (data.equals("minuschuchvaraId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
                 editMessageReplyMarkup.setReplyMarkup(hollyBotService.chuchvaraminus(chatId));
@@ -865,7 +860,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("plyuschuchvaraId")){
+            if (data.equals("plyuschuchvaraId")) {
                 EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
@@ -878,8 +873,8 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 //lepeshka
-            if (data.equals("minuslepeshkaId")){
-                EditMessageReplyMarkup editMessageReplyMarkup =  new EditMessageReplyMarkup();
+            if (data.equals("minuslepeshkaId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
                 editMessageReplyMarkup.setReplyMarkup(hollyBotService.minuslepeshka(chatId));
@@ -889,7 +884,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("plyuslepeshkaId")){
+            if (data.equals("plyuslepeshkaId")) {
                 EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
@@ -902,8 +897,8 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 //norin
-            if (data.equals("minusnorinId")){
-                EditMessageReplyMarkup editMessageReplyMarkup =  new EditMessageReplyMarkup();
+            if (data.equals("minusnorinId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
                 editMessageReplyMarkup.setReplyMarkup(hollyBotService.minusnorin(chatId));
@@ -913,7 +908,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("plyusnorinId")){
+            if (data.equals("plyusnorinId")) {
                 EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
@@ -926,8 +921,8 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 //shashli
-            if (data.equals("minusshashliId")){
-                EditMessageReplyMarkup editMessageReplyMarkup =  new EditMessageReplyMarkup();
+            if (data.equals("minusshashliId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
                 editMessageReplyMarkup.setReplyMarkup(hollyBotService.minusshashli(chatId));
@@ -937,7 +932,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("plyusshashliId")){
+            if (data.equals("plyusshashliId")) {
                 EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
@@ -950,8 +945,8 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 //dimlama
-            if (data.equals("minusdimlamaId")){
-                EditMessageReplyMarkup editMessageReplyMarkup =  new EditMessageReplyMarkup();
+            if (data.equals("minusdimlamaId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
                 editMessageReplyMarkup.setReplyMarkup(hollyBotService.minusdimlama(chatId));
@@ -961,7 +956,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("plyusdimlamaId")){
+            if (data.equals("plyusdimlamaId")) {
                 EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
@@ -973,8 +968,152 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+//halva
+            if (data.equals("minushalvaId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.minushalva(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("plyushalvaId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.plyushalva(chatId));
 
-            if (data.equals("savatId")){
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+//sumalak
+            if (data.equals("minussumalakId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.minussumalak(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("plyussumalakId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.plyussumalak(chatId));
+
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+//chakchak
+            if (data.equals("minuschakchakId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.minuschakchak(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("plyuschakchakId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.plyuschakchak(chatId));
+
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+//qand
+            if (data.equals("minusqandId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.minusqand(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("plyusqandId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.plyusqand(chatId));
+
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+//pirog
+            if (data.equals("minuspirogId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.minuspirog(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("plyuspirogId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.plyuspirog(chatId));
+
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+//yongoqchala
+            if (data.equals("minusyongoqchalaId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.minusyongoqchala(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("plyusyongoqchalaId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.plyusyongoqchala(chatId));
+
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+//savat
+            if (data.equals("savatId")) {
                 try {
                     execute(hollyBotService.savat(chatId));
                 } catch (TelegramApiException e) {
@@ -982,7 +1121,7 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 //            tillar data ichida deleta ham bor
-            if (data.equals("ozId")){
+            if (data.equals("ozId")) {
                 try {
                     execute(hollyBotService.ozbektilimenu(chatId));
 
@@ -996,7 +1135,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("rusId")){
+            if (data.equals("rusId")) {
                 try {
                     execute(hollyBotService.rustilimenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1007,7 +1146,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("ingId")){
+            if (data.equals("ingId")) {
                 try {
                     execute(hollyBotService.ingliztilimenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1019,7 +1158,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("xitoyId")){
+            if (data.equals("xitoyId")) {
                 try {
                     execute(hollyBotService.xitoymenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1031,7 +1170,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("qaytId")){
+            if (data.equals("qaytId")) {
                 try {
                     execute(hollyBotService.milliytaommenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1042,7 +1181,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("qayturId")){
+            if (data.equals("qayturId")) {
                 try {
                     execute(hollyBotService.milliytaommenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1053,7 +1192,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("qaytishqaytishId")){
+            if (data.equals("qaytishqaytishId")) {
                 try {
                     execute(hollyBotService.milliytaommenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1064,7 +1203,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("oldorqaqaytishId")){
+            if (data.equals("oldorqaqaytishId")) {
                 try {
                     execute(hollyBotService.milliytaommenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1075,7 +1214,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("orqastkrqaytId")){
+            if (data.equals("orqastkrqaytId")) {
                 try {
                     execute(hollyBotService.milliytaommenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1086,7 +1225,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("qaytishIdgfdg")){
+            if (data.equals("qaytishIdgfdg")) {
                 try {
                     execute(hollyBotService.milliytaommenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1097,7 +1236,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("qaytishqaytishstikerlioxirida")){
+            if (data.equals("qaytishqaytishstikerlioxirida")) {
                 try {
                     execute(hollyBotService.desetmenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1108,7 +1247,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("oldidaborqaytishshrinlinikiId")){
+            if (data.equals("oldidaborqaytishshrinlinikiId")) {
                 try {
                     execute(hollyBotService.desetmenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1119,7 +1258,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("qaytishboshidaikitafastfooduzbbrinchisiId")){
+            if (data.equals("qaytishboshidaikitafastfooduzbbrinchisiId")) {
                 try {
                     execute(hollyBotService.fastfoodmenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1130,7 +1269,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("qaytishoxiridaikitalifastfooduzbikinchisiId")){
+            if (data.equals("qaytishoxiridaikitalifastfooduzbikinchisiId")) {
                 try {
                     execute(hollyBotService.fastfoodmenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1141,7 +1280,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("oldidaoxiridaqaytishfastfooduchnchisiId")){
+            if (data.equals("oldidaoxiridaqaytishfastfooduchnchisiId")) {
                 try {
                     execute(hollyBotService.fastfoodmenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1151,7 +1290,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("oldiorqaqaytishIdmuzqaymoq")){
+            if (data.equals("oldiorqaqaytishIdmuzqaymoq")) {
                 try {
                     execute(hollyBotService.desetmenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1161,7 +1300,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("oldidaikitaqaytishpirogId")){
+            if (data.equals("oldidaikitaqaytishpirogId")) {
                 try {
                     execute(hollyBotService.desetmenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1171,7 +1310,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("qaytishoxiridaikitamevaliId")){
+            if (data.equals("qaytishoxiridaikitamevaliId")) {
                 try {
                     execute(hollyBotService.desetmenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1181,7 +1320,7 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (data.equals("qaytishfastfooduzb4cisiId")){
+            if (data.equals("qaytishfastfooduzb4cisiId")) {
                 try {
                     execute(hollyBotService.fastfoodmenu(chatId));
                     DeleteMessage deleteMessage = new DeleteMessage();
@@ -1191,7 +1330,6 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
 
 
         }
