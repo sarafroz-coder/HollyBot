@@ -1367,14 +1367,125 @@ public class HollyBotService {
     }
 
 
+    int dimlama = 0;
     public SendPhoto dimlama(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/7"));
         sendPhoto.setCaption("Dimlama \nGo‘sht, kartoshka va sabzavotlar o‘z sharbatida yumshoq pishib, ta’omga boy va iliq ta’m beradi✨\n" +
                 "Narxi:28.000\uD83D\uDCB8");
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minusdimlamaId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(shashli));
+        button.setCallbackData("dimlamacountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyusdimlamaId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return sendPhoto;
     }
+    public InlineKeyboardMarkup plyusdimlama(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/7"));
+        sendPhoto.setCaption("Dimlama \nGo‘sht, kartoshka va sabzavotlar o‘z sharbatida yumshoq pishib, ta’omga boy va iliq ta’m beradi✨\n" +
+                "Narxi:28.000\uD83D\uDCB8");
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minusdimlamaId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(++dimlama));
+        button.setCallbackData("dimlamacountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyusdimlamaId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return inlineKeyboardMarkup;
+    }
+    public InlineKeyboardMarkup minusdimlama(Long chatId) {
+        if (dimlama >0) {
+            dimlama--;
+        }
+
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/7"));
+        sendPhoto.setCaption("Dimlama \nGo‘sht, kartoshka va sabzavotlar o‘z sharbatida yumshoq pishib, ta’omga boy va iliq ta’m beradi✨\n" +
+                "Narxi:28.000\uD83D\uDCB8");
+
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minusdimlamaId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(shashli));
+        button.setCallbackData("dimlamacountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyusdimlamaId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return inlineKeyboardMarkup;
+    }
+
 
 
     //    sabzovotli va shorva taomlar menu
