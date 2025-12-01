@@ -861,30 +861,356 @@ public class HollyBotService {
 
 
 
+
+    int chuchvara = 0;
     public SendPhoto chuchvara(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/6"));
         sendPhoto.setCaption("Chuchvara \nMol go'shti, sabzi, piyoz, o'simlik yog'i, sarimsoq, pomidor, maydanoz\uD83C\uDF1F \nNarxi:donasi 35.000\uD83D\uDCB8");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minuschuchvaraId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(chuchvara));
+        button.setCallbackData("chuchvaracountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyuschuchvaraId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return sendPhoto;
     }
+    public InlineKeyboardMarkup chuchvaraplyus(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/6"));
+        sendPhoto.setCaption("Chuchvara \nMol go'shti, sabzi, piyoz, o'simlik yog'i, sarimsoq, pomidor, maydanoz\uD83C\uDF1F \nNarxi:donasi 35.000\uD83D\uDCB8");
 
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minuschuchvaraId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(++chuchvara));
+        button.setCallbackData("chuchvaracountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyuschuchvaraId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return inlineKeyboardMarkup;
+    }
+    public InlineKeyboardMarkup chuchvaraminus(Long chatId) {
+
+        if (chuchvara >0) {
+            chuchvara--;
+        }
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/6"));
+        sendPhoto.setCaption("Chuchvara \nMol go'shti, sabzi, piyoz, o'simlik yog'i, sarimsoq, pomidor, maydanoz\uD83C\uDF1F \nNarxi:donasi 35.000\uD83D\uDCB8");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minuschuchvaraId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(chuchvara));
+        button.setCallbackData("chuchvaracountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyuschuchvaraId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return inlineKeyboardMarkup;
+    }
+
+
+    int lepeshka = 0;
     public SendPhoto lepeshka(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/8"));
         sendPhoto.setCaption("Lepeshka \nU o'ziga xos hid va yumshoq tuzilishga ega\uD83C\uDF1F \nNarxi:donasi 6.000\uD83D\uDCB8");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minuslepeshkaId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(lepeshka));
+        button.setCallbackData("lepeshkacountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyuslepeshkaId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return sendPhoto;
     }
+    public InlineKeyboardMarkup plyuslepeshka(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/8"));
+        sendPhoto.setCaption("Lepeshka \nU o'ziga xos hid va yumshoq tuzilishga ega\uD83C\uDF1F \nNarxi:donasi 6.000\uD83D\uDCB8");
 
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minuslepeshkaId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(++chuchvara));
+        button.setCallbackData("lepeshkacountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyuslepeshkaId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return inlineKeyboardMarkup;
+    }
+    public InlineKeyboardMarkup minuslepeshka(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/8"));
+        sendPhoto.setCaption("Lepeshka \nU o'ziga xos hid va yumshoq tuzilishga ega\uD83C\uDF1F \nNarxi:donasi 6.000\uD83D\uDCB8");
+
+        if (lepeshka >0) {
+            lepeshka--;
+        }
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minuslepeshkaId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(chuchvara));
+        button.setCallbackData("lepeshkacountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyuslepeshkaId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return inlineKeyboardMarkup;
+    }
+
+    int norin = 0;
     public SendPhoto norin(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/23"));
         sendPhoto.setCaption("Norin \nOt go'shti taomga boy ta'm va xushbo'y hid beradi. Dimlangan xamir va o'simlik moyi bir tekis qovurishini ta'minlaydi. Bulyon ta'mga sharbat va chuqurlik qo'shadi\uD83C\uDF1F \nNarxi:47.000\uD83D\uDCB8");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minusnorinId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(++norin));
+        button.setCallbackData("norincountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyusnorinId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return sendPhoto;
     }
+    public InlineKeyboardMarkup plyusnorin(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/23"));
+        sendPhoto.setCaption("Norin \nOt go'shti taomga boy ta'm va xushbo'y hid beradi. Dimlangan xamir va o'simlik moyi bir tekis qovurishini ta'minlaydi. Bulyon ta'mga sharbat va chuqurlik qo'shadi\uD83C\uDF1F \nNarxi:47.000\uD83D\uDCB8");
 
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minusnorinId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(norin));
+        button.setCallbackData("norincountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyusnorinId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return inlineKeyboardMarkup;
+    }
+    public InlineKeyboardMarkup minusnorin(Long chatId) {
+        if (norin >0) {
+            norin--;
+        }
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/23"));
+        sendPhoto.setCaption("Norin \nOt go'shti taomga boy ta'm va xushbo'y hid beradi. Dimlangan xamir va o'simlik moyi bir tekis qovurishini ta'minlaydi. Bulyon ta'mga sharbat va chuqurlik qo'shadi\uD83C\uDF1F \nNarxi:47.000\uD83D\uDCB8");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minusnorinId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(norin));
+        button.setCallbackData("norincountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyusnorinId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return inlineKeyboardMarkup;
+    }
 
     //    Go'shtli taomlar menu
     public SendMessage goshtlitaom(Long chatId) {
@@ -924,13 +1250,122 @@ public class HollyBotService {
 
     }
 
+    int shashli = 0;
     public SendPhoto shashli(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/9"));
         sendPhoto.setCaption("Shashlik \nKo‘mirda qizarib pishgan, shirali va xushbo‘y ta’mi bilan ishtahani ochadi✨ \nNarxi:18.000\uD83D\uDCB8");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minusshashliId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(shashli));
+        button.setCallbackData("shashlicountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyusshashliId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return sendPhoto;
     }
+    public InlineKeyboardMarkup plyusshashli(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/9"));
+        sendPhoto.setCaption("Shashlik \nKo‘mirda qizarib pishgan, shirali va xushbo‘y ta’mi bilan ishtahani ochadi✨ \nNarxi:18.000\uD83D\uDCB8");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minusshashliId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(++shashli));
+        button.setCallbackData("shashlicountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyusshashliId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return inlineKeyboardMarkup;
+    }
+    public InlineKeyboardMarkup minusshashli(Long chatId) {
+        if (shashli >0) {
+            shashli--;
+        }
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/9"));
+        sendPhoto.setCaption("Shashlik \nKo‘mirda qizarib pishgan, shirali va xushbo‘y ta’mi bilan ishtahani ochadi✨ \nNarxi:18.000\uD83D\uDCB8");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minusshashliId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(shashli));
+        button.setCallbackData("shashlicountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyusshashliId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return inlineKeyboardMarkup;
+    }
+
 
     public SendPhoto dimlama(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();

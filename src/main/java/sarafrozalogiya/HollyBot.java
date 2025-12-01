@@ -853,7 +853,102 @@ public class HollyBot extends TelegramLongPollingBot {
             }
 
 
+//chuchvara
+            if (data.equals("minuschuchvaraId")){
+                EditMessageReplyMarkup editMessageReplyMarkup =  new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.chuchvaraminus(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("plyuschuchvaraId")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.chuchvaraplyus(chatId));
 
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+//lepeshka
+            if (data.equals("minuslepeshkaId")){
+                EditMessageReplyMarkup editMessageReplyMarkup =  new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.minuslepeshka(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("plyuslepeshkaId")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.plyuslepeshka(chatId));
+
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+//norin
+            if (data.equals("minusnorinId")){
+                EditMessageReplyMarkup editMessageReplyMarkup =  new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.minusnorin(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("plyusnorinId")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.plyusnorin(chatId));
+
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+//shashli
+            if (data.equals("minusshashliId")){
+                EditMessageReplyMarkup editMessageReplyMarkup =  new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.minusshashli(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("plyusshashliId")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.plyusshashli(chatId));
+
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
 
             if (data.equals("savatId")){
                 try {
@@ -862,9 +957,6 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
-
-
 //            tillar data ichida deleta ham bor
             if (data.equals("ozId")){
                 try {
