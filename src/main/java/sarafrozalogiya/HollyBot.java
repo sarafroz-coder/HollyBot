@@ -827,6 +827,32 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 
+//            manti
+            if (data.equals("minusmantiId")){
+                EditMessageReplyMarkup editMessageReplyMarkup =  new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.mantiminus(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("plyusmantiId")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(hollyBotService.mantiplyus(chatId));
+
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
 
 
             if (data.equals("savatId")){

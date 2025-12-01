@@ -58,7 +58,7 @@ public class HollyBotService {
     }
 
 
-//    ozbe tili menusini qaytish stikeri "⬅️ Qaytish"
+    //    ozbe tili menusini qaytish stikeri "⬅️ Qaytish"
     public SendMessage ozbektilimenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -195,6 +195,7 @@ public class HollyBotService {
     }
 
     int palov = 0;
+
     public SendPhoto palov(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -202,7 +203,7 @@ public class HollyBotService {
         sendPhoto.setCaption("Palov \nSersuv go‘shti, yumshoq guruchi va xushbo‘y ziravorlari bilan to‘yimli ta’m beradi✨ \nNarxi:50.000\uD83D\uDCB8");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>>  rowList  = new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
         List<InlineKeyboardButton> row = new ArrayList<>();
 
         InlineKeyboardButton button = new InlineKeyboardButton();
@@ -233,6 +234,7 @@ public class HollyBotService {
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return sendPhoto;
     }
+
     public InlineKeyboardMarkup palovPlyus(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -240,7 +242,7 @@ public class HollyBotService {
         sendPhoto.setCaption("Palov \nSersuv go‘shti, yumshoq guruchi va xushbo‘y ziravorlari bilan to‘yimli ta’m beradi✨ \nNarxi:50.000\uD83D\uDCB8");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>>  rowList  = new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
         List<InlineKeyboardButton> row = new ArrayList<>();
 
         InlineKeyboardButton button = new InlineKeyboardButton();
@@ -271,9 +273,10 @@ public class HollyBotService {
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return inlineKeyboardMarkup;
     }
+
     public InlineKeyboardMarkup palovMinus(Long chatId) {
 
-        if (palov>0){
+        if (palov > 0) {
             palov--;
         }
 
@@ -283,7 +286,7 @@ public class HollyBotService {
         sendPhoto.setCaption("Palov \nSersuv go‘shti, yumshoq guruchi va xushbo‘y ziravorlari bilan to‘yimli ta’m beradi✨ \nNarxi:50.000\uD83D\uDCB8");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>>  rowList  = new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
         List<InlineKeyboardButton> row = new ArrayList<>();
 
         InlineKeyboardButton button = new InlineKeyboardButton();
@@ -316,6 +319,7 @@ public class HollyBotService {
     }
 
     int lagmon = 0;
+
     public SendPhoto lagmon(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -323,7 +327,7 @@ public class HollyBotService {
         sendPhoto.setCaption("Lag'mon \nQizil yog‘da qovurilgan xamir, shirali sabzavotlar va mazali ta’mi bilan juda to‘yimli✨ \nNarxi:54.000\uD83D\uDCB8");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>>  rowList  = new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
         List<InlineKeyboardButton> row = new ArrayList<>();
         InlineKeyboardButton button = new InlineKeyboardButton();
@@ -353,6 +357,7 @@ public class HollyBotService {
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return sendPhoto;
     }
+
     public InlineKeyboardMarkup lagmonplyus(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -360,7 +365,7 @@ public class HollyBotService {
         sendPhoto.setCaption("Lag'mon \nQizil yog‘da qovurilgan xamir, shirali sabzavotlar va mazali ta’mi bilan juda to‘yimli✨ \nNarxi:54.000\uD83D\uDCB8");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>>  rowList  = new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
         List<InlineKeyboardButton> row = new ArrayList<>();
         InlineKeyboardButton button = new InlineKeyboardButton();
@@ -390,9 +395,10 @@ public class HollyBotService {
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return inlineKeyboardMarkup;
     }
+
     public InlineKeyboardMarkup lagmonminus(Long chatId) {
 
-        if (lagmon > 0){
+        if (lagmon > 0) {
             lagmon--;
         }
 
@@ -402,7 +408,7 @@ public class HollyBotService {
         sendPhoto.setCaption("Lag'mon \nQizil yog‘da qovurilgan xamir, shirali sabzavotlar va mazali ta’mi bilan juda to‘yimli✨ \nNarxi:54.000\uD83D\uDCB8");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>>  rowList  = new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
         List<InlineKeyboardButton> row = new ArrayList<>();
         InlineKeyboardButton button = new InlineKeyboardButton();
@@ -433,7 +439,8 @@ public class HollyBotService {
         return inlineKeyboardMarkup;
     }
 
-    int shorva =  0;
+    int shorva = 0;
+
     public SendPhoto shorva(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -441,9 +448,9 @@ public class HollyBotService {
         sendPhoto.setCaption("Sho'rva \nYengil va mazali bulon, yumshoq go‘sht hamda sabzavotlar bilan iliq ta’m beradi✨ \nNarxi:35.000\uD83D\uDCB8");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>>rowList = new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-        List<InlineKeyboardButton>row =  new ArrayList<>();
+        List<InlineKeyboardButton> row = new ArrayList<>();
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText(" - ");
         button.setCallbackData("minusshorvaId");
@@ -471,9 +478,10 @@ public class HollyBotService {
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return sendPhoto;
     }
+
     public InlineKeyboardMarkup shorvaminus(Long chatId) {
 
-        if (shorva > 0){
+        if (shorva > 0) {
             shorva--;
         }
 
@@ -483,9 +491,9 @@ public class HollyBotService {
         sendPhoto.setCaption("Sho'rva \nYengil va mazali bulon, yumshoq go‘sht hamda sabzavotlar bilan iliq ta’m beradi✨ \nNarxi:35.000\uD83D\uDCB8");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>>rowList = new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-        List<InlineKeyboardButton>row =  new ArrayList<>();
+        List<InlineKeyboardButton> row = new ArrayList<>();
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText(" - ");
         button.setCallbackData("minusshorvaId");
@@ -513,6 +521,7 @@ public class HollyBotService {
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return inlineKeyboardMarkup;
     }
+
     public InlineKeyboardMarkup shorvaplyus(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -520,9 +529,9 @@ public class HollyBotService {
         sendPhoto.setCaption("Sho'rva \nYengil va mazali bulon, yumshoq go‘sht hamda sabzavotlar bilan iliq ta’m beradi✨ \nNarxi:35.000\uD83D\uDCB8");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>>rowList = new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-        List<InlineKeyboardButton>row =  new ArrayList<>();
+        List<InlineKeyboardButton> row = new ArrayList<>();
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText(" - ");
         button.setCallbackData("minusshorvaId");
@@ -606,7 +615,9 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(inlineKeyboardMarkup);
         return sendMessage;
     }
-    int somsa =  0;
+
+    int somsa = 0;
+
     public SendPhoto somsa(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -614,9 +625,9 @@ public class HollyBotService {
         sendPhoto.setCaption("Somsa \nGo‘shtli somsa o‘zining yumshoq ta’mi va xushbo‘y pishig‘i bilan ajralib turadi✨ \nNarxi:donasi - 8.000\uD83D\uDCB8");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>>rowList = new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-        List<InlineKeyboardButton>row =  new ArrayList<>();
+        List<InlineKeyboardButton> row = new ArrayList<>();
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText(" - ");
         button.setCallbackData("minussomsaId");
@@ -645,6 +656,7 @@ public class HollyBotService {
         return sendPhoto;
 
     }
+
     public InlineKeyboardMarkup somsaplyus(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -652,9 +664,9 @@ public class HollyBotService {
         sendPhoto.setCaption("Somsa \nGo‘shtli somsa o‘zining yumshoq ta’mi va xushbo‘y pishig‘i bilan ajralib turadi✨ \nNarxi:donasi - 8.000\uD83D\uDCB8");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>>rowList = new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-        List<InlineKeyboardButton>row =  new ArrayList<>();
+        List<InlineKeyboardButton> row = new ArrayList<>();
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText(" - ");
         button.setCallbackData("minussomsaId");
@@ -683,9 +695,10 @@ public class HollyBotService {
         return inlineKeyboardMarkup;
 
     }
+
     public InlineKeyboardMarkup somsaminus(Long chatId) {
 
-        if (somsa > 0){
+        if (somsa > 0) {
             somsa--;
         }
 
@@ -695,9 +708,9 @@ public class HollyBotService {
         sendPhoto.setCaption("Somsa \nGo‘shtli somsa o‘zining yumshoq ta’mi va xushbo‘y pishig‘i bilan ajralib turadi✨ \nNarxi:donasi - 8.000\uD83D\uDCB8");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>>rowList = new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-        List<InlineKeyboardButton>row =  new ArrayList<>();
+        List<InlineKeyboardButton> row = new ArrayList<>();
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText(" - ");
         button.setCallbackData("minussomsaId");
@@ -728,14 +741,126 @@ public class HollyBotService {
     }
 
 
-
+    int manti = 0;
     public SendPhoto manti(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/5"));
         sendPhoto.setCaption("Manti \nMol go'shti bilan manti\uD83C\uDF1F \nNarxi:donasi 8.000\uD83D\uDCB8");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minusmantiId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(manti));
+        button.setCallbackData("manticountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyusmantiId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return sendPhoto;
     }
+    public InlineKeyboardMarkup mantiplyus(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/5"));
+        sendPhoto.setCaption("Manti \nMol go'shti bilan manti\uD83C\uDF1F \nNarxi:donasi 8.000\uD83D\uDCB8");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minusmantiId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(++manti));
+        button.setCallbackData("manticountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyusmantiId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return inlineKeyboardMarkup;
+    }
+    public InlineKeyboardMarkup mantiminus(Long chatId) {
+
+        if (manti >0){
+            manti--;
+        }
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/5"));
+        sendPhoto.setCaption("Manti \nMol go'shti bilan manti\uD83C\uDF1F \nNarxi:donasi 8.000\uD83D\uDCB8");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText(" - ");
+        button.setCallbackData("minusmantiId");
+        row.add(button);
+        rowList.add(row);
+
+        button = new InlineKeyboardButton();
+        button.setText(String.valueOf(manti));
+        button.setCallbackData("manticountId");
+        row.add(button);
+
+        button = new InlineKeyboardButton();
+        button.setText(" + ");
+        button.setCallbackData("plyusmantiId");
+        row.add(button);
+
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Savat");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return inlineKeyboardMarkup;
+    }
+
+
+
+
     public SendPhoto chuchvara(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -743,6 +868,7 @@ public class HollyBotService {
         sendPhoto.setCaption("Chuchvara \nMol go'shti, sabzi, piyoz, o'simlik yog'i, sarimsoq, pomidor, maydanoz\uD83C\uDF1F \nNarxi:donasi 35.000\uD83D\uDCB8");
         return sendPhoto;
     }
+
     public SendPhoto lepeshka(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -750,6 +876,7 @@ public class HollyBotService {
         sendPhoto.setCaption("Lepeshka \nU o'ziga xos hid va yumshoq tuzilishga ega\uD83C\uDF1F \nNarxi:donasi 6.000\uD83D\uDCB8");
         return sendPhoto;
     }
+
     public SendPhoto norin(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -796,6 +923,7 @@ public class HollyBotService {
 
 
     }
+
     public SendPhoto shashli(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -803,7 +931,8 @@ public class HollyBotService {
         sendPhoto.setCaption("Shashlik \nKo‘mirda qizarib pishgan, shirali va xushbo‘y ta’mi bilan ishtahani ochadi✨ \nNarxi:18.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto dimlama(Long chatId){
+
+    public SendPhoto dimlama(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/7"));
@@ -852,7 +981,8 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(inlineKeyboardMarkup);
         return sendMessage;
     }
-    public SendPhoto mastava(Long chatId){
+
+    public SendPhoto mastava(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/32"));
@@ -860,7 +990,8 @@ public class HollyBotService {
                 "Narxi: 18.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto sabzavotliqovurilgantaom(Long chatId){
+
+    public SendPhoto sabzavotliqovurilgantaom(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/12"));
@@ -868,7 +999,8 @@ public class HollyBotService {
                 "Narxi: 15.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto tabaka(Long chatId){
+
+    public SendPhoto tabaka(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/29"));
@@ -940,6 +1072,7 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(inlineKeyboardMarkup);
         return sendMessage;
     }
+
     public SendPhoto choyqora(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -948,6 +1081,7 @@ public class HollyBotService {
                 "Narxi: 3.000\uD83D\uDCB8");
         return sendPhoto;
     }
+
     public SendPhoto yashilchoy(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -956,6 +1090,7 @@ public class HollyBotService {
                 "Narxi: 3.000\uD83D\uDCB8");
         return sendPhoto;
     }
+
     public SendPhoto limonchoy(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -965,6 +1100,7 @@ public class HollyBotService {
                 "\n");
         return sendPhoto;
     }
+
     public SendPhoto qatiq(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -973,7 +1109,8 @@ public class HollyBotService {
                 "Narxi: 7.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto ayron(Long chatId){
+
+    public SendPhoto ayron(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/34"));
@@ -981,6 +1118,7 @@ public class HollyBotService {
                 "Narxi: 5.000\uD83D\uDCB8");
         return sendPhoto;
     }
+
     public SendPhoto suzma(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -989,6 +1127,7 @@ public class HollyBotService {
                 "Narxi: 8.000 \uD83D\uDCB8");
         return sendPhoto;
     }
+
     public SendPhoto anorsharbat(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1057,7 +1196,8 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(inlineKeyboardMarkup);
         return sendMessage;
     }
-//    desert ichidigi
+
+    //    desert ichidigi
     public SendPhoto halva(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1067,6 +1207,7 @@ public class HollyBotService {
                 "Narxi: 14.000 \uD83D\uDCB8");
         return sendPhoto;
     }
+
     public SendPhoto sumalak(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1075,6 +1216,7 @@ public class HollyBotService {
                 "Narxi: 16.000\uD83D\uDCB8");
         return sendPhoto;
     }
+
     public SendPhoto chakchak(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1083,6 +1225,7 @@ public class HollyBotService {
                 "Narxi: 21.000 \uD83D\uDCB8");
         return sendPhoto;
     }
+
     public SendPhoto qand(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1091,6 +1234,7 @@ public class HollyBotService {
                 "Narxi: 4.000\uD83D\uDCB8");
         return sendPhoto;
     }
+
     public SendPhoto pirog(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1099,6 +1243,7 @@ public class HollyBotService {
                 "Narxi: 30.000\uD83D\uDCB8");
         return sendPhoto;
     }
+
     public SendPhoto yongoqchala(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1109,8 +1254,7 @@ public class HollyBotService {
     }
 
 
-
-//   FAST FOOD UZB
+    //   FAST FOOD UZB
 //  fast food uzb ni menusini qaytishini stikeri ⏪
     public SendMessage fastfoodmenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
@@ -1156,23 +1300,23 @@ public class HollyBotService {
         return sendMessage;
     }
 
-//    1-si
-    public SendMessage Burgersendvich(Long chatId){
+    //    1-si
+    public SendMessage Burgersendvich(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("O'zingizga burgerni tanlang!:");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>>rowList = new  ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-        List<InlineKeyboardButton>row = new ArrayList<>();
+        List<InlineKeyboardButton> row = new ArrayList<>();
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("Double burger");
         button.setCallbackData("doublburgId");
         row.add(button);
         rowList.add(row);
 
-        row =  new ArrayList<>();
+        row = new ArrayList<>();
         button = new InlineKeyboardButton();
         button.setText("Gamburger");
         button.setCallbackData("gamburgId");
@@ -1202,7 +1346,8 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(inlineKeyboardMarkup);
         return sendMessage;
     }
-    public SendPhoto doubleburg (Long chatId){
+
+    public SendPhoto doubleburg(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/33"));
@@ -1210,7 +1355,8 @@ public class HollyBotService {
                 "Narxi: 28.000");
         return sendPhoto;
     }
-    public SendPhoto gamburg (Long chatId){
+
+    public SendPhoto gamburg(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/38"));
@@ -1218,7 +1364,8 @@ public class HollyBotService {
                 "Narxi: 20.000");
         return sendPhoto;
     }
-    public SendPhoto cheeknburg (Long chatId){
+
+    public SendPhoto cheeknburg(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/39"));
@@ -1226,7 +1373,8 @@ public class HollyBotService {
                 "Narxi: 34.000");
         return sendPhoto;
     }
-    public SendPhoto clabsandwich (Long chatId){
+
+    public SendPhoto clabsandwich(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/37"));
@@ -1235,53 +1383,54 @@ public class HollyBotService {
         return sendPhoto;
     }
 
-//    2-si
-    public SendMessage Pizzapechtaomlar(Long chatId){
-    SendMessage sendMessage = new SendMessage();
-    sendMessage.setChatId(chatId);
-    sendMessage.setText("O'zingizga yoqqan taomni tanlang!:");
+    //    2-si
+    public SendMessage Pizzapechtaomlar(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("O'zingizga yoqqan taomni tanlang!:");
 
-    InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-    List<List<InlineKeyboardButton>>rowList = new  ArrayList<>();
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-    List<InlineKeyboardButton>row = new ArrayList<>();
-    InlineKeyboardButton button = new InlineKeyboardButton();
-    button.setText("Margaritta");
-    button.setCallbackData("margaritaId");
-    row.add(button);
-    rowList.add(row);
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("Margaritta");
+        button.setCallbackData("margaritaId");
+        row.add(button);
+        rowList.add(row);
 
-    row =  new ArrayList<>();
-    button = new InlineKeyboardButton();
-    button.setText("Pepperoni");
-    button.setCallbackData("pepperoniId");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Pepperoni");
+        button.setCallbackData("pepperoniId");
+        row.add(button);
+        rowList.add(row);
 
-    button = new InlineKeyboardButton();
-    button.setText("BBQ chicken");
-    button.setCallbackData("bbqburgId");
-    row.add(button);
+        button = new InlineKeyboardButton();
+        button.setText("BBQ chicken");
+        button.setCallbackData("bbqburgId");
+        row.add(button);
 
-    row = new ArrayList<>();
-    button = new InlineKeyboardButton();
-    button.setText("Vegan pizza");
-    button.setCallbackData("veganoizzaId");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Vegan pizza");
+        button.setCallbackData("veganoizzaId");
+        row.add(button);
+        rowList.add(row);
 
-    row =  new ArrayList<>();
-    button =  new InlineKeyboardButton();
-    button.setText("Qaytish ⬅\uFE0F");
-    button.setCallbackData("qaytishoxiridaikitalifastfooduzbikinchisiId");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Qaytish ⬅\uFE0F");
+        button.setCallbackData("qaytishoxiridaikitalifastfooduzbikinchisiId");
+        row.add(button);
+        rowList.add(row);
 
-    inlineKeyboardMarkup.setKeyboard(rowList);
-    sendMessage.setReplyMarkup(inlineKeyboardMarkup);
-    return sendMessage;
-}
-    public SendPhoto margarit (Long chatId){
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+        return sendMessage;
+    }
+
+    public SendPhoto margarit(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/57"));
@@ -1289,7 +1438,8 @@ public class HollyBotService {
                 "Narxi: 65.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto pepperoni (Long chatId){
+
+    public SendPhoto pepperoni(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/56"));
@@ -1297,7 +1447,8 @@ public class HollyBotService {
                 "Narxi: 80.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto bbqpizza (Long chatId){
+
+    public SendPhoto bbqpizza(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/111"));
@@ -1305,7 +1456,8 @@ public class HollyBotService {
                 "Narxi: 120.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto veganpizza (Long chatId){
+
+    public SendPhoto veganpizza(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/58"));
@@ -1314,53 +1466,54 @@ public class HollyBotService {
         return sendPhoto;
     }
 
-//    3-si
-    public SendMessage tuzlisnack(Long chatId){
-    SendMessage sendMessage = new SendMessage();
-    sendMessage.setChatId(chatId);
-    sendMessage.setText("O'zingizga yoqqan taomni tanlang!:");
+    //    3-si
+    public SendMessage tuzlisnack(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("O'zingizga yoqqan taomni tanlang!:");
 
-    InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-    List<List<InlineKeyboardButton>>rowList = new  ArrayList<>();
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-    List<InlineKeyboardButton>row = new ArrayList<>();
-    InlineKeyboardButton button = new InlineKeyboardButton();
-    button.setText("Fries");
-    button.setCallbackData("friesId");
-    row.add(button);
-    rowList.add(row);
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("Fries");
+        button.setCallbackData("friesId");
+        row.add(button);
+        rowList.add(row);
 
-    row = new ArrayList<>();
-    button = new InlineKeyboardButton();
-    button.setText("Mozzarella sticks");
-    button.setCallbackData("mozzarellasticksId");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Mozzarella sticks");
+        button.setCallbackData("mozzarellasticksId");
+        row.add(button);
+        rowList.add(row);
 
-    button = new InlineKeyboardButton();
-    button.setText("Onion rings");
-    button.setCallbackData("onionringsId");
-    row.add(button);
+        button = new InlineKeyboardButton();
+        button.setText("Onion rings");
+        button.setCallbackData("onionringsId");
+        row.add(button);
 
-    row = new ArrayList<>();
-    button = new InlineKeyboardButton();
-    button.setText("Nachos");
-    button.setCallbackData("nachosId");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Nachos");
+        button.setCallbackData("nachosId");
+        row.add(button);
+        rowList.add(row);
 
-    row = new ArrayList<>();
-    button = new InlineKeyboardButton();
-    button.setText("Qaytish ⬅\uFE0F");
-    button.setCallbackData("oldidaoxiridaqaytishfastfooduchnchisiId");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Qaytish ⬅\uFE0F");
+        button.setCallbackData("oldidaoxiridaqaytishfastfooduchnchisiId");
+        row.add(button);
+        rowList.add(row);
 
-    inlineKeyboardMarkup.setKeyboard(rowList);
-    sendMessage.setReplyMarkup(inlineKeyboardMarkup);
-    return sendMessage;
-}
-    public SendPhoto fries (Long chatId){
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+        return sendMessage;
+    }
+
+    public SendPhoto fries(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/116"));
@@ -1368,7 +1521,8 @@ public class HollyBotService {
                 "Narxi: 15.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto mozzarellasticks (Long chatId){
+
+    public SendPhoto mozzarellasticks(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/115"));
@@ -1376,7 +1530,8 @@ public class HollyBotService {
                 "Narxi: 22.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto onionrings (Long chatId){
+
+    public SendPhoto onionrings(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/114"));
@@ -1384,7 +1539,8 @@ public class HollyBotService {
                 "Narxi: 23.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto Nachos (Long chatId){
+
+    public SendPhoto Nachos(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/113"));
@@ -1393,53 +1549,54 @@ public class HollyBotService {
         return sendPhoto;
     }
 
-//    4-si
-    public SendMessage teztayyorlanadiganxalqarotaomlar(Long chatId){
-    SendMessage sendMessage = new SendMessage();
-    sendMessage.setChatId(chatId);
-    sendMessage.setText("O'zingizga yoqqan taomni tanlang!:");
+    //    4-si
+    public SendMessage teztayyorlanadiganxalqarotaomlar(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("O'zingizga yoqqan taomni tanlang!:");
 
-    InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-    List<List<InlineKeyboardButton>>rowList = new  ArrayList<>();
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-    List<InlineKeyboardButton>row = new ArrayList<>();
-    InlineKeyboardButton button = new InlineKeyboardButton();
-    button.setText("Hot dog");
-    button.setCallbackData("hotdogId");
-    row.add(button);
-    rowList.add(row);
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("Hot dog");
+        button.setCallbackData("hotdogId");
+        row.add(button);
+        rowList.add(row);
 
-    button = new InlineKeyboardButton();
-    button.setText("Tacos");
-    button.setCallbackData("tacosId");
-    row.add(button);
+        button = new InlineKeyboardButton();
+        button.setText("Tacos");
+        button.setCallbackData("tacosId");
+        row.add(button);
 
 
-    row = new ArrayList<>();
-    button = new InlineKeyboardButton();
-    button.setText("Shawarma");
-    button.setCallbackData("shawarmaId");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Shawarma");
+        button.setCallbackData("shawarmaId");
+        row.add(button);
+        rowList.add(row);
 
-    button = new InlineKeyboardButton();
-    button.setText("Burrito");
-    button.setCallbackData("burritoId");
-    row.add(button);
+        button = new InlineKeyboardButton();
+        button.setText("Burrito");
+        button.setCallbackData("burritoId");
+        row.add(button);
 
-    
-    row = new ArrayList<>();
-    button = new InlineKeyboardButton();
-    button.setText("Qaytish ⬅\uFE0F");
-    button.setCallbackData("qaytishfastfooduzb4cisiId");
-    row.add(button);
-    rowList.add(row);
 
-    inlineKeyboardMarkup.setKeyboard(rowList);
-    sendMessage.setReplyMarkup(inlineKeyboardMarkup);
-    return sendMessage;
-}
-    public SendPhoto hotdog (Long chatId){
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Qaytish ⬅\uFE0F");
+        button.setCallbackData("qaytishfastfooduzb4cisiId");
+        row.add(button);
+        rowList.add(row);
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+        return sendMessage;
+    }
+
+    public SendPhoto hotdog(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/59"));
@@ -1447,7 +1604,8 @@ public class HollyBotService {
                 "Narxi: 17.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto tacos (Long chatId){
+
+    public SendPhoto tacos(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/54"));
@@ -1455,7 +1613,8 @@ public class HollyBotService {
                 "Narxi: 19.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto burrito (Long chatId){
+
+    public SendPhoto burrito(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/52"));
@@ -1463,7 +1622,8 @@ public class HollyBotService {
                 "Narxi: 21.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto shawarma (Long chatId){
+
+    public SendPhoto shawarma(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/53"));
@@ -1471,7 +1631,6 @@ public class HollyBotService {
                 "Narxi: 20.000\uD83D\uDCB8");
         return sendPhoto;
     }
-
 
 
     //  desert qaytishi "↩️ Qaytish"
@@ -1523,42 +1682,43 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
-//    1 qaytishi
-    public SendMessage keksvapechenya(Long chatId){
+
+    //    1 qaytishi
+    public SendMessage keksvapechenya(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("O'zingizga yoqqan taomni tanlang!:");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>>rowList = new  ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-        List<InlineKeyboardButton>row = new ArrayList<>();
+        List<InlineKeyboardButton> row = new ArrayList<>();
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("Muffin");
         button.setCallbackData("muffinId");
         row.add(button);
         rowList.add(row);
 
-        row =  new ArrayList<>();
+        row = new ArrayList<>();
         button = new InlineKeyboardButton();
         button.setText("Cupcake");
         button.setCallbackData("cupcakeId");
         row.add(button);
         rowList.add(row);
 
-        button =  new InlineKeyboardButton();
+        button = new InlineKeyboardButton();
         button.setText("Cookie");
         button.setCallbackData("cookieId");
         row.add(button);
 
-        row =  new ArrayList<>();
-        button =  new InlineKeyboardButton();
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
         button.setText("Biscuit");
         button.setCallbackData("biscuitId");
         row.add(button);
         rowList.add(row);
 
-        button =  new InlineKeyboardButton();
+        button = new InlineKeyboardButton();
         button.setText("Brownie");
         button.setCallbackData("brownieId");
         row.add(button);
@@ -1575,7 +1735,8 @@ public class HollyBotService {
         return sendMessage;
 
     }
-    public SendPhoto muffin(Long chatId){
+
+    public SendPhoto muffin(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/67"));
@@ -1583,7 +1744,8 @@ public class HollyBotService {
                 "Narxi: 11.000 \uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto cupcake(Long chatId){
+
+    public SendPhoto cupcake(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/69"));
@@ -1591,7 +1753,8 @@ public class HollyBotService {
                 "Narxi: 10.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto cookie(Long chatId){
+
+    public SendPhoto cookie(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/72"));
@@ -1600,7 +1763,8 @@ public class HollyBotService {
                 "Narxi: 5.000 \uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto biscuit(Long chatId){
+
+    public SendPhoto biscuit(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/74"));
@@ -1610,7 +1774,8 @@ public class HollyBotService {
         return sendPhoto;
 
     }
-    public SendPhoto brownie(Long chatId){
+
+    public SendPhoto brownie(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/92"));
@@ -1620,23 +1785,23 @@ public class HollyBotService {
         return sendPhoto;
     }
 
-//    2 qaytishi
-    public SendMessage shirinlilarvakanfetlar(Long chatId){
+    //    2 qaytishi
+    public SendMessage shirinlilarvakanfetlar(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("O'zingizga yoqqan taomni tanlang!:");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>>rowList = new  ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-        List<InlineKeyboardButton>row = new ArrayList<>();
+        List<InlineKeyboardButton> row = new ArrayList<>();
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("Shokolad");
         button.setCallbackData("shokoladId");
         row.add(button);
         rowList.add(row);
 
-        button =  new InlineKeyboardButton();
+        button = new InlineKeyboardButton();
         button.setText("Truff");
         button.setCallbackData("truffId");
         row.add(button);
@@ -1649,22 +1814,22 @@ public class HollyBotService {
         row.add(button);
         rowList.add(row);
 
-        button =  new InlineKeyboardButton();
+        button = new InlineKeyboardButton();
         button.setText("Marshmellow");
         button.setCallbackData("marshmellowId");
         row.add(button);
 
 
-        row =  new ArrayList<>();
-        button =  new InlineKeyboardButton();
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
         button.setText("Praline");
         button.setCallbackData("pralineId");
         row.add(button);
         rowList.add(row);
 
 
-        row =  new ArrayList<>();
-        button =  new InlineKeyboardButton();
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
         button.setText("Qaytish ⬅\uFE0F");
         button.setCallbackData("oldidaborqaytishshrinlinikiId");
         row.add(button);
@@ -1674,7 +1839,8 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(inlineKeyboardMarkup);
         return sendMessage;
     }
-    public SendPhoto chocolate(Long chatId){
+
+    public SendPhoto chocolate(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/78"));
@@ -1682,7 +1848,8 @@ public class HollyBotService {
                 "Narxi: 11.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto truff(Long chatId){
+
+    public SendPhoto truff(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/80"));
@@ -1690,21 +1857,24 @@ public class HollyBotService {
                 "Narxi: 18.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto karamel(Long chatId){
+
+    public SendPhoto karamel(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/82"));
         sendPhoto.setCaption("Karamel \nShirin va yumshoq karamel – og’izda eriydigan mazasi bilan choy yoki qahvaga a’lo qo‘shimcha! ✨ \nNarxi:5.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto marshmellow(Long chatId){
+
+    public SendPhoto marshmellow(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/84"));
         sendPhoto.setCaption("Marshmellow \nYengil, yumshoq, shakarli va havo kabi mayin shirinlik. Ko‘pincha issiq shokoladga solib ichiladi yoki olovda qizdirib yeyiladi ✨ \nNarxi:8.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto praline(Long chatId){
+
+    public SendPhoto praline(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/86"));
@@ -1712,60 +1882,61 @@ public class HollyBotService {
         return sendPhoto;
     }
 
-//    3qaytishi
-    public SendMessage Muzqaymoqvasovuqdesertlar(Long chatId){
-    SendMessage sendMessage = new SendMessage();
-    sendMessage.setChatId(chatId);
-    sendMessage.setText("O'zingizga yoqqan desrtni tanlang!:");
+    //    3qaytishi
+    public SendMessage Muzqaymoqvasovuqdesertlar(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("O'zingizga yoqqan desrtni tanlang!:");
 
-    InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-    List<List<InlineKeyboardButton>>rowList = new  ArrayList<>();
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-    List<InlineKeyboardButton>row = new ArrayList<>();
-    InlineKeyboardButton button = new InlineKeyboardButton();
-    button.setText("Ice cream");
-    button.setCallbackData("icecreamId");
-    row.add(button);
-    rowList.add(row);
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("Ice cream");
+        button.setCallbackData("icecreamId");
+        row.add(button);
+        rowList.add(row);
 
-    row =  new ArrayList<>();
-    button = new InlineKeyboardButton();
-    button.setText("Gelato");
-    button.setCallbackData("gelatoId");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Gelato");
+        button.setCallbackData("gelatoId");
+        row.add(button);
+        rowList.add(row);
 
-    button =  new InlineKeyboardButton();
-    button.setText("Sorbet");
-    button.setCallbackData("sorbetId");
-    row.add(button);
+        button = new InlineKeyboardButton();
+        button.setText("Sorbet");
+        button.setCallbackData("sorbetId");
+        row.add(button);
 
-    row =  new ArrayList<>();
-    button =  new InlineKeyboardButton();
-    button.setText("Frozen yogurt");
-    button.setCallbackData("frozenyogurtId");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Frozen yogurt");
+        button.setCallbackData("frozenyogurtId");
+        row.add(button);
+        rowList.add(row);
 
-    button =  new InlineKeyboardButton();
-    button.setText("Milkshake");
-    button.setCallbackData("milkshakeId");
-    row.add(button);
+        button = new InlineKeyboardButton();
+        button.setText("Milkshake");
+        button.setCallbackData("milkshakeId");
+        row.add(button);
 
-    row = new ArrayList<>();
-    button = new InlineKeyboardButton();
-    button.setText("Qaytish ⬅\uFE0F");
-    button.setCallbackData("oldiorqaqaytishIdmuzqaymoq");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Qaytish ⬅\uFE0F");
+        button.setCallbackData("oldiorqaqaytishIdmuzqaymoq");
+        row.add(button);
+        rowList.add(row);
 
-    inlineKeyboardMarkup.setKeyboard(rowList);
-    sendMessage.setReplyMarkup(inlineKeyboardMarkup);
-    return sendMessage;
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+        return sendMessage;
 
 
-}
-    public SendPhoto icecream(Long chatId){
+    }
+
+    public SendPhoto icecream(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/88"));
@@ -1773,7 +1944,8 @@ public class HollyBotService {
                 "Narxi: 20.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto gelato(Long chatId){
+
+    public SendPhoto gelato(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/90"));
@@ -1781,7 +1953,8 @@ public class HollyBotService {
                 "Narxi: 32.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto sorbet(Long chatId){
+
+    public SendPhoto sorbet(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/94"));
@@ -1789,7 +1962,8 @@ public class HollyBotService {
                 "Narxi: 24.000 so‘m \uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto frozenyogurt(Long chatId){
+
+    public SendPhoto frozenyogurt(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/96"));
@@ -1798,7 +1972,8 @@ public class HollyBotService {
         return sendPhoto;
 
     }
-    public SendPhoto milkshake(Long chatId){
+
+    public SendPhoto milkshake(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/99"));
@@ -1807,55 +1982,56 @@ public class HollyBotService {
         return sendPhoto;
     }
 
-//    4qaytishi
-    public SendMessage Pirogvatortlar(Long chatId){
-    SendMessage sendMessage = new SendMessage();
-    sendMessage.setChatId(chatId);
-    sendMessage.setText("O'zingizga yoqqan desrtni tanlang!:");
+    //    4qaytishi
+    public SendMessage Pirogvatortlar(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("O'zingizga yoqqan desrtni tanlang!:");
 
-    InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-    List<List<InlineKeyboardButton>>rowList = new  ArrayList<>();
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-    List<InlineKeyboardButton>row = new ArrayList<>();
-    InlineKeyboardButton button = new InlineKeyboardButton();
-    button.setText("Cheesecake");
-    button.setCallbackData("cheesecakeId");
-    row.add(button);
-    rowList.add(row);
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("Cheesecake");
+        button.setCallbackData("cheesecakeId");
+        row.add(button);
+        rowList.add(row);
 
-    row =  new ArrayList<>();
-    button = new InlineKeyboardButton();
-    button.setText("Apple pie");
-    button.setCallbackData("applepieId");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Apple pie");
+        button.setCallbackData("applepieId");
+        row.add(button);
+        rowList.add(row);
 
-    button =  new InlineKeyboardButton();
-    button.setText("Chocolate cake");
-    button.setCallbackData("chocolatecakeId");
-    row.add(button);
+        button = new InlineKeyboardButton();
+        button.setText("Chocolate cake");
+        button.setCallbackData("chocolatecakeId");
+        row.add(button);
 
-    row =  new ArrayList<>();
-    button =  new InlineKeyboardButton();
-    button.setText("Fruit tart");
-    button.setCallbackData("fruittartId");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Fruit tart");
+        button.setCallbackData("fruittartId");
+        row.add(button);
+        rowList.add(row);
 
-    row = new ArrayList<>();
-    button = new InlineKeyboardButton();
-    button.setText("Qaytish ⬅\uFE0F");
-    button.setCallbackData("oldidaikitaqaytishpirogId");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Qaytish ⬅\uFE0F");
+        button.setCallbackData("oldidaikitaqaytishpirogId");
+        row.add(button);
+        rowList.add(row);
 
-    inlineKeyboardMarkup.setKeyboard(rowList);
-    sendMessage.setReplyMarkup(inlineKeyboardMarkup);
-    return sendMessage;
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+        return sendMessage;
 
 
-}
-    public SendPhoto cheesecake(Long chatId){
+    }
+
+    public SendPhoto cheesecake(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/107"));
@@ -1863,7 +2039,8 @@ public class HollyBotService {
                 "Narxi: 54.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto applepie(Long chatId){
+
+    public SendPhoto applepie(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/108"));
@@ -1871,7 +2048,8 @@ public class HollyBotService {
                 "Narxi: 28.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto chocolatecake(Long chatId){
+
+    public SendPhoto chocolatecake(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/110"));
@@ -1879,7 +2057,8 @@ public class HollyBotService {
                 "Narxi: 46.000 so‘m \uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto fruittart(Long chatId){
+
+    public SendPhoto fruittart(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/109"));
@@ -1889,50 +2068,51 @@ public class HollyBotService {
 
     }
 
-//    5qaytishi
-    public SendMessage Mevalidesertlar(Long chatId){
-    SendMessage sendMessage = new SendMessage();
-    sendMessage.setChatId(chatId);
-    sendMessage.setText("O'zingizga yoqqan desrtni tanlang!:");
+    //    5qaytishi
+    public SendMessage Mevalidesertlar(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("O'zingizga yoqqan desrtni tanlang!:");
 
-    InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-    List<List<InlineKeyboardButton>>rowList = new  ArrayList<>();
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-    List<InlineKeyboardButton>row = new ArrayList<>();
-    InlineKeyboardButton button = new InlineKeyboardButton();
-    button.setText("Fruit salad");
-    button.setCallbackData("fruitsaladId");
-    row.add(button);
-    rowList.add(row);
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("Fruit salad");
+        button.setCallbackData("fruitsaladId");
+        row.add(button);
+        rowList.add(row);
 
-    row =  new ArrayList<>();
-    button = new InlineKeyboardButton();
-    button.setText("Compote");
-    button.setCallbackData("compoteId");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Compote");
+        button.setCallbackData("compoteId");
+        row.add(button);
+        rowList.add(row);
 
-    row =  new ArrayList<>();
-    button =  new InlineKeyboardButton();
-    button.setText("Jelly");
-    button.setCallbackData("jellyId");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Jelly");
+        button.setCallbackData("jellyId");
+        row.add(button);
+        rowList.add(row);
 
-    row = new ArrayList<>();
-    button = new InlineKeyboardButton();
-    button.setText("Qaytish ⬅\uFE0F");
-    button.setCallbackData("qaytishoxiridaikitamevaliId");
-    row.add(button);
-    rowList.add(row);
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
+        button.setText("Qaytish ⬅\uFE0F");
+        button.setCallbackData("qaytishoxiridaikitamevaliId");
+        row.add(button);
+        rowList.add(row);
 
-    inlineKeyboardMarkup.setKeyboard(rowList);
-    sendMessage.setReplyMarkup(inlineKeyboardMarkup);
-    return sendMessage;
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+        return sendMessage;
 
 
-}
-    public SendPhoto fruitsalad(Long chatId){
+    }
+
+    public SendPhoto fruitsalad(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/101"));
@@ -1940,7 +2120,8 @@ public class HollyBotService {
                 "Narxi: 54.000\uD83D\uDCB8");
         return sendPhoto;
     }
-    public SendPhoto compote(Long chatId){
+
+    public SendPhoto compote(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hollyBotphoto/117"));
@@ -1948,6 +2129,7 @@ public class HollyBotService {
                 "Narxi: 58.000(1l.)\uD83D\uDCB8");
         return sendPhoto;
     }
+
     public SendPhoto jelly(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1959,7 +2141,7 @@ public class HollyBotService {
     }
 
 
-    public SendMessage savat(Long chatId){
+    public SendMessage savat(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("Savatga qoshilmoqda...");
@@ -2004,6 +2186,7 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
+
     public SendMessage rusmilytaommenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -2053,6 +2236,7 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
+
     public SendMessage rusfastfoodmenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -2091,6 +2275,7 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
+
     public SendMessage rusdesert(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -2136,8 +2321,6 @@ public class HollyBotService {
     }
 
 
-
-
     public SendMessage ingliztilimenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -2175,6 +2358,7 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
+
     public SendMessage inglsmilytaommenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -2222,6 +2406,7 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
+
     public SendMessage inglisfastfoodmenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -2260,6 +2445,7 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
+
     public SendMessage inglsdesert(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -2305,8 +2491,6 @@ public class HollyBotService {
     }
 
 
-
-
     public SendMessage xitoymenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -2342,6 +2526,7 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
+
     public SendMessage xitoymilliytaom(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -2389,6 +2574,7 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
+
     public SendMessage xitoyfastfoodmenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -2427,6 +2613,7 @@ public class HollyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
+
     public SendMessage xitoydesert(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
