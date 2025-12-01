@@ -142,6 +142,13 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+            if (text.equals("\uD83C\uDF5B Palov va Guruchli taomlar")){
+                try {
+                    execute(hollyBotService.Palovvaguruchlitaom(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
 
         } else if (update.hasCallbackQuery()) {
             CallbackQuery callbackQuery = update.getCallbackQuery();
