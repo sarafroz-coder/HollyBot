@@ -38,7 +38,6 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("\uD83C\uDF70 Desert")){
                 try {
                     execute(hollyBotService.desetmenu(chatId));
@@ -53,7 +52,6 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
 
             if (text.equals("\uD83E\uDD58 Национальные блюда")){
                 try {
@@ -150,7 +148,30 @@ public class HollyBot extends TelegramLongPollingBot {
                 }
             }
 
-        } else if (update.hasCallbackQuery()) {
+
+            if (text.equals("\uD83C\uDF5B Palov va Guruchli taomlar")) {
+                try {
+                    execute(hollyBotService.Palovvaguruchlitaom(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("\uD83C\uDF5E Non va Xamirli taomlar")){
+                try {
+                    execute(hollyBotService.nonvaxamr(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("\uD83E\uDD69 Go'shtli taomlar")){
+                try {
+                    execute(hollyBotService.goshtlitaom(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+        else if (update.hasCallbackQuery()) {
             CallbackQuery callbackQuery = update.getCallbackQuery();
             String data = callbackQuery.getData();
             Long chatId = callbackQuery.getMessage().getChatId();
@@ -170,6 +191,70 @@ public class HollyBot extends TelegramLongPollingBot {
 //                } catch (TelegramApiException e) {
 //                    throw new RuntimeException(e);
 //                }
+
+//            palov va guruchli taomlar
+            if (data.equals("palovId")){
+                try {
+                    execute(hollyBotService.palov(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("lagmonId")){
+                try {
+                    execute(hollyBotService.lagmon(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("shorvaId")){
+                try {
+                    execute(hollyBotService.shorva(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+//            non va xamirli taomlar
+            if (data.equals("mantiId")){
+                try {
+                    execute(hollyBotService.manti(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("chuchvaraId")){
+                try {
+                    execute(hollyBotService.chuchvara(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("lepeshkaId")){
+                try {
+                    execute(hollyBotService.lepeshka(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("norinId")){
+                try {
+                    execute(hollyBotService.norin(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("somsaId")){
+                try {
+                    execute(hollyBotService.somsa(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
+//            tillar data ichida deleta ham bor
             if (data.equals("ozId")){
                 try {
                     execute(hollyBotService.ozbektilimenu(chatId));
@@ -219,6 +304,30 @@ public class HollyBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+            if (data.equals("qaytId")){
+                try {
+                    execute(hollyBotService.milliytaommenu(chatId));
+                    DeleteMessage deleteMessage = new DeleteMessage();
+                    deleteMessage.setChatId(chatId);
+                    deleteMessage.setMessageId(messageId);
+                    execute(deleteMessage);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("qayturId")){
+                try {
+                    execute(hollyBotService.milliytaommenu(chatId));
+                    DeleteMessage deleteMessage = new DeleteMessage();
+                    deleteMessage.setChatId(chatId);
+                    deleteMessage.setMessageId(messageId);
+                    execute(deleteMessage);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
 
         }
     }
