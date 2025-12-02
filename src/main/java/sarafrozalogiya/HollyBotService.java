@@ -1542,6 +1542,7 @@ public class HollyBotService {
         return sendMessage;
     }
 
+
     public SendPhoto mastava(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
